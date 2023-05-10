@@ -12,17 +12,29 @@ public class luhnford {
     System.out.print("Which existing folder would you like to assign the file to? ");
     String folderName = daScan.nextLine();
     String filePath = folderName + "\\" + fileName;
-    try (FileWriter FileWrite = new FileWriter(fileName)) {
+    
+    /* Get input values for customer information
+    * System.out.print("Enter First Name: ");
+    * String CustFirstName = daScan.nextLine();
+    * System.out.print("Enter Last Name: ");
+    * String CustLastName = daScan.nextLine();
+    * System.out.print("Enter City: ");
+    * String CustCity = daScan.nextLine();
+    * System.out.print("Enter Postal Code: ");
+    * String CustPCode = daScan.nextLine();
+    * System.out.print("Enter Credit Card Number: ");
+    * String CustCCard = daScan.nextLine();
+    */
+    try (FileWriter FileWrite = new FileWriter(filePath)) {
       FileWrite.write("NEW CUSTOMER PROFILE\n-------------");
       FileWrite.write("First Name: " + CustFirstName + "\n");
       FileWrite.write("Last Name: " + CustLastName + "\n");
       FileWrite.write("City: " + CustCity + "\n");
       FileWrite.write("Postal Code: " + CustPCode + "\n");
       FileWrite.write("Credit Card Number: " + CustCCard + "\n");
-      System.out.println("FILE SAVED IN FOLDER:", folderName);
-    catch IOException e) {
-      System.out.println("Error in da process cuh. No capa cuh." + e.getMessage());
-    }
+      System.out.println("FILE SAVED IN FOLDER: " + folderName);
+    } catch (IOException e) {
+      System.out.println("Error in the process: " + e.getMessage());
     }
   }
 }
