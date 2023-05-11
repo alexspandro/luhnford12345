@@ -4,6 +4,9 @@ import java.io.IOException;
 
 public class luhnford {
   public static void main(String[] args){
+    CustomerDataFile();
+  } 
+  public static void CustomerDataFile(){
     Scanner daScan = new Scanner(System.in);
     String currentDir = System.getProperty("user.dir");
     System.out.println("Using cwd: " + currentDir); //gets cwd
@@ -38,3 +41,4 @@ public class luhnford {
     }
   }
 }
+
