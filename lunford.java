@@ -4,14 +4,10 @@ import java.io.IOException;
 
 public class luhnford {
   public static void main(String[] args){
-    CustomerDataFile();
-  } 
-  public static void CustomerDataFile(){
     Scanner daScan = new Scanner(System.in);
-    String currentDir = System.getProperty("user.dir");
-    System.out.println("Using cwd: " + currentDir); //gets cwd
+    System.out.println("Using cwd: " + System.getProperty(currentDir); //gets cwd
     System.out.print("Generating new customer file...\nWhat do you want to name this file? ");
-    String fileName = (daScan.nextLine() + ".csv"); 
+    String fileName = daScan.nextLine() + ".csv"; 
     System.out.print("Which existing folder would you like to assign the file to? ");
     String folderName = daScan.nextLine();
     String filePath = folderName + "\\" + fileName;
@@ -28,6 +24,11 @@ public class luhnford {
     * System.out.print("Enter Credit Card Number: ");
     * String CustCCard = daScan.nextLine();
     */
+    
+    createCustomerDataFile(filePath, custFirstName, custLastName, custCity, custPcode, custCCard);
+  }
+  
+  public static void CustomerDataFile(filePath, custFirstName, custLastName, custCity, custPcode, custCCard)){
     try (FileWriter FileWrite = new FileWriter(filePath)) {
       FileWrite.write("NEW CUSTOMER PROFILE\n-------------");
       FileWrite.write("First Name: " + CustFirstName + "\n");
