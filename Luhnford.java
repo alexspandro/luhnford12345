@@ -8,7 +8,7 @@ class Luhnford{
         String path = file.getAbsolutePath();
         Scanner sc = new Scanner(new File(path + file));
         ArrayList<String[]> records = new ArrayList<String[]>();
-        String[] record = new String[2];
+        String[] record = new String[1621];
         while (sc.hasNext()){
             record = sc.nextLine().split(",");
             records.add(record);
@@ -24,6 +24,7 @@ class Luhnford{
         int sevenCount = 0;
         int eightCount = 0;
         int nineCount = 0;
+        
         sc.close();
     }
     public static void printMenu(){
