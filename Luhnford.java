@@ -24,7 +24,58 @@ class Luhnford{
         int sevenCount = 0;
         int eightCount = 0;
         int nineCount = 0;
-        
+        for (int z = 0 ; z < records; z++) {
+            if (records[z] == "1"){
+                oneCount = oneCount + 1;
+            }
+            else if (records[z] == "2"){
+                twoCount = twoCount + 1;
+            }
+            else if (records[z] == "3"){
+                threeCount = threeCount + 1;
+            }
+            else if (records[z] == "4"){
+                fourCount = fourCount + 1;
+            }
+            else if (records[z] == "5"){
+                fiveCount = fiveCount + 1;
+            }
+            else if (records[z] == "6"){
+                sixCount = sixCount + 1;
+            }
+            else if (records[z] == "7"){
+                sevenCount = sevenCount + 1;
+            }
+            else if (records[z] == "8"){
+                eightCount = eightCount + 1;
+            }
+            else if (records[z] == "9"){
+                nineCount = nineCount + 1;
+            }
+            else{
+                System.out.println("No");
+            }
+        }
+        int totalCount = oneCount + twoCount + threeCount + fourCount + fiveCount + sixCount + sevenCount + eightCount + nineCount;
+        System.out.println(oneCount);
+        System.out.println(twoCount);
+        System.out.println(threeCount);
+        System.out.println(fourCount);
+        System.out.println(fiveCount);
+        System.out.println(sixCount);
+        System.out.println(sevenCount);
+        System.out.println(eightCount);
+        System.out.println(nineCount);
+        System.out.println(totalCount);
+        int onePrcnt = (oneCount/totalCount)*100;
+        int twoPrcnt = (twoCount/totalCount)*100;
+        int threePrcnt = (threeCount/totalCount)*100;
+        int fourPrcnt = (fourCount/totalCount)*100;
+        int fivePrcnt = (fiveCount/totalCount)*100;
+        int sixPrcnt = (sixCount/totalCount)*100;
+        int sevenPrcnt = (sevenCount/totalCount)*100;
+        int eightPrcnt = (eightCount/totalCount)*100;
+        int ninePrcnt = (nineCount/totalCount)*100;
         sc.close();
     }
     public static void printMenu(){
