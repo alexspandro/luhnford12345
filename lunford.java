@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class luhnford {
+public class lunford {
   public static void main(String[] args){
     Scanner daScan = new Scanner(System.in);
     System.out.println("Using cwd: " + System.getProperty(currentDir); //gets cwd
