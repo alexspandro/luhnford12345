@@ -12,19 +12,19 @@ public class lunford {
     String folderName = daScan.nextLine();
     String filePath = folderName + "\\" + fileName;
 
-    /* Get input values for customer information
-    * System.out.print("Enter First Name: ");
-    * String CustFirstName = daScan.nextLine();
-    * System.out.print("Enter Last Name: ");
-    * String CustLastName = daScan.nextLine();
-    * System.out.print("Enter City: ");
-    * String CustCity = daScan.nextLine();
-    * System.out.print("Enter Postal Code: ");
-    * String CustPCode = daScan.nextLine();
-    * System.out.print("Enter Credit Card Number: ");
-    * String CustCCard = daScan.nextLine();
-    */
-
+    // Get input values for customer information
+    System.out.print("Enter First Name: ");
+    String CustFirstName = daScan.nextLine();
+    System.out.print("Enter Last Name: ");
+    String CustLastName = daScan.nextLine();
+    System.out.print("Enter City: ");
+    String CustCity = daScan.nextLine();
+    System.out.print("Enter Postal Code: ");
+    String CustPCode = daScan.nextLine();
+    System.out.print("Enter Credit Card Number: ");
+    String CustCCard = daScan.nextLine();
+    
+// allows inputs to be used in the file
     createCustomerDataFile(filePath, custFirstName, custLastName, custCity, custPcode, custCCard);
   }
 
