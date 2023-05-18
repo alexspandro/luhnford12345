@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.*;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -52,6 +54,34 @@ class Luhnford{
              return total % 10 .equals 0;
          }
      }
+          public static boolean isValidPostalCode(String postalCode) {
+        // Check if the postal code has at least 3 characters
+        if (postalCode.length() < 3) {
+            return false;
+        }
+
+        // Open the postal codes file and search for a match
+        File file = new File("postal_codes.csv");
+        Scanner scanner;
+        try {
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("Postal codes file not found.");
+            return false;
+        }
+        boolean matchFound = false;
+        while (scanner.hasNextLine() && !matchFound) {
+            String line = scanner.nextLine();
+            if (line.startsWith(postalCode.substring(0, 3))) {
+                matchFound = true;
+            }
+        }
+        scanner.close();
+
+        // If a match is found, the postal code is valid
+        return matchFound;
+    }
+}
 
         /* Get input values for customer information
         * System.out.print("Enter First Name: ");
